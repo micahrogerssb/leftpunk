@@ -1,0 +1,18 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-punk-gray mt-auto">
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex justify-between items-center">
+      <p class="font-mono text-sm text-gray-400">
+        © {currentYear} LeftPunk
+      </p>
+      <div class="flex gap-6">
+        <a href="/rss.xml" class="text-sm text-gray-400 hover:text-punk-red transition-colors">RSS</a>
+        <a href="/privacy" class="text-sm text-gray-400 hover:text-punk-red transition-colors">Privacy</a>
+        <a href="https://github.com/leftpunk" class="text-sm text-gray-400 hover:text-punk-red transition-colors">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>

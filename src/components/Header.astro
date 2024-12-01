@@ -1,0 +1,26 @@
+---
+import Logo from './Logo.astro';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+];
+---
+
+<header class="border-b border-white/5 backdrop-blur-md bg-black/20">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <Logo />
+    <ul class="flex gap-8">
+      {navItems.map(item => (
+        <li>
+          <a 
+            href={item.href}
+            class="font-mono text-sm text-white/70 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-punk-red hover:after:w-full after:transition-all"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

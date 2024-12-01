@@ -1,0 +1,33 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/jetbrains-mono';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CosmicBackground from '../components/CosmicBackground.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="LeftPunk - A platform for leftist writing and discourse" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | LeftPunk</title>
+  </head>
+  <body class="bg-transparent text-white min-h-screen flex flex-col relative antialiased">
+    <CosmicBackground />
+    <Header />
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

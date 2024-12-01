@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
+import AnimatedHeading from '../components/AnimatedHeading.astro';
+
+const featuredPosts = [
+  {
+    title: "On Moving On",
+    excerpt: "A reflection on hope, fear, and the power of collective action in the face of political upheaval.",
+    author: "SuperNotNitin",
+    date: new Date('2024-04-16'),
+    slug: "on-moving-on"
+  },
+  {
+    title: "Kamala Harris and the Democratic Party",
+    excerpt: "An analysis of the Democratic Party's shift away from progressive politics and the implications for the American left.",
+    author: "Micah Rogers",
+    date: new Date('2024-04-15'),
+    slug: "kamala-harris-democratic-party"
+  }
+];
+---
+
+<Layout title="Home">
+  <section class="mb-16">
+    <AnimatedHeading />
+    <p class="text-xl text-gray-400 max-w-2xl font-light leading-relaxed">
+      LeftPunk is a platform for radical writing and analysis, exploring the intersection of technology, politics, and social justice.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="font-mono text-2xl mb-8 font-light tracking-tight">Latest Articles</h2>
+    <div class="max-w-4xl space-y-8">
+      {featuredPosts.map(post => (
+        <FeaturedPost {...post} />
+      ))}
+    </div>
+  </section>
+</Layout>

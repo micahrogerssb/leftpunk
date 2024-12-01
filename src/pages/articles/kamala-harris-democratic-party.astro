@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { format } from 'date-fns';
+
+const publishDate = new Date('2024-04-15');
+---
+
+<Layout title="Kamala Harris and the Democratic Party">
+  <article class="max-w-3xl mx-auto prose prose-invert bg-black/30 backdrop-blur-sm p-8 rounded-lg border border-purple-800/30">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">Kamala Harris and the Democratic Party</h1>
+      <div class="flex justify-between items-center font-mono text-sm text-gray-400">
+        <span>by Micah Rogers</span>
+        <time datetime={publishDate.toISOString()}>
+          {format(publishDate, 'MMMM d, yyyy')}
+        </time>
+      </div>
+    </header>
+
+    <div class="space-y-6 text-lg">
+      <p>
+        Back in 2020, there was a vision of the future. The ground fell out from under America. Working or ruling class, white and minority communities, right and left wing, we were all united behind a failure of globalization and capitalism: Covid-19. Bernie Sanders, a Democrat only for presidential campaigns, (although much of the current youth support for the Democratic Party would rather a Bernie-style democratic socialist vision of the future) offered an alternative future for the party that would focus our efforts on negotiating the inevitable decline of the US as an empire in a way that would be more equitable for the US and less harmful for the recipients of our imperial violence.
+      </p>
+
+      <p>
+        The Democrats made the grave mistake of pressuring him out of the party's apparatus. They saw his populism as a threat, not recognizing the ever growing need for reasonable populists who would push for equity by whatever means necessary. And unfortunately, the time for Bernie-style reforms is over. It is time for improvisation, to build spaces conducive to the invention of new styles of left-wing power and governance that transcend the antiquated and frankly imperialist tendencies of Bernie Sanders. Couched in rhetoric about the need to support veterans, the Vermont Senator has voted for defense bills that include funding for the military industrial complex. He has also occasionally stated his belief that the US military needs to be strong to support our commitments globally. However, unlike the rhetoric of Kamala Harris, who simply states the need for America to have, "the most lethal fighting force in the world", Bernie recognizes the need for diplomacy and reducing unnecessary military interventions. Furthermore, he is a tried and true politician who we know has a moral constitution.
+      </p>
+
+      <p>
+        His time has come and gone. He is too old. The old American progressivism is dying, and the new American left struggles to be born. Gone are the days of corny old white men getting powerful from their support for trade unionism. In are the days of corporate-style non-profits that commodify revolutionary leftism and sell it on the internet for donations. The left in America cannot bring the revolution into the 21st century as these capitalist non-profits outfits do. We must bring the 21st century into the revolution, building power and seizing the already burgeoning anti-capitalist left. There is a world to win, one person at a time.
+      </p>
+    </div>
+  </article>
+</Layout>
